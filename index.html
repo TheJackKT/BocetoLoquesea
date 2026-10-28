@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    >
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pruebas</title>
+</head>
+
+<body>
+
+    <div class="layout">
+
+     
+        <aside id="menu-lateral" class="menu-lateral Oculto">
+
+
+            <div class="boton-contenedor">
+                <button  onClick="AccionMenu()" class="ocultoB boton-menu">
+                    <i class="icono-menu fas fa-bars"></i>
+                    <span class="texto">Inicio</span>
+                </button>
+            </div>
+            
+            <div class="boton-contenedor">
+                <button class="boton">
+                    <i class="icono fas fa-user"></i>
+                    <span class="texto">Beneficiarios</span>
+                </button>
+            </div>
+
+            <div class="boton-contenedor">
+                <button class="boton">
+                    <i class="icono fas fa-building"></i>
+                    <span class="texto">Donantes</span>
+                </button>
+            </div>
+
+            <div class="boton-contenedor">
+                <button class="boton">
+                    <i class="icono fas fa-bullhorn"></i>
+                    <span class="texto">O-Reports</span>
+                </button>
+            </div>
+
+            <div class="boton-contenedor">
+                <button class="boton">
+                    <i class="icono fas fa-graduation-cap"></i>
+                    <span class="texto">Academia</span>
+                </button>
+            </div>
+
+            <div class="boton-contenedor">
+                <button class="boton">
+                    <i class="icono fas fa-folder"></i>
+                    <span class="texto">Adjuntos</span>
+                </button>
+            </div>
+
+        </aside>
+
+
+        <main id="contenido-principal" class="contenido-principal normal">
+
+            <div class="contenedor cuadricula">
+
+              
+                <div class="item-adjuntos" id="prueba1">
+
+                        <h1>Adjuntos</h1>
+
+                    <p>Cargue de Archivos..</p>
+
+                    <label for="inputArchivos" class="boton-archivo">Cargar Archivos</label>
+            
+                    <input
+                        type="file"
+                        id="inputArchivos"
+                        multiple
+                    >
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

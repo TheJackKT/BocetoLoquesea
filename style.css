@@ -1,0 +1,384 @@
+body{
+
+    margin: 0;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.layout {
+    display: flex;
+}
+
+
+.menu-lateral {
+    background-color: #ebeef8;
+    box-shadow: inset 0 0 5px #776a6a;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+   
+    width: 35px;
+    height: 100vh;
+
+    overflow: visible;
+    z-index: 100;
+
+}
+
+.contenido-principal {
+    flex: 1;
+    padding: 20px;
+}
+
+.contenido-principal.normal, .contenido-principal.expandido {
+ 
+    transition: margin-left 0.3s ease;
+}
+
+.contenido-principal.expandido {
+
+    margin-left: 35px;
+
+}
+
+
+.contenedor {
+    
+    gap: 20px;
+    font-family: 'Lucida Sans', sans-serif;
+    transition: opacity 0.1s ease;
+    }
+
+.contenedor.cuadricula {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+
+.boton-contenedor {
+    margin-top: 5px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+}
+
+.boton {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    background-color: #c4c7d100;
+    width: 30px;
+    height: 30px;
+
+
+    border: none;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+    overflow: hidden;
+    cursor: pointer;
+    color: white;
+
+    transition: left 0.3s ease, background-color 0.2s ease, width 0.3s ease;
+  
+}
+
+.texto{
+  
+    white-space: nowrap;
+    opacity: 0;
+    width: 0;
+    justify-self: end;
+    transition: opacity 0.2s ease;
+    
+}
+
+.icono{
+    color: #3c53d8;
+    font-size: 0.8rem;
+    transition: scale 0.2s ease, color 0.2s ease, opacity 0.2s ease, transform 0.4s ease;
+
+}
+
+
+.boton:hover {
+    width: 130px;
+    gap: 5px;
+    background-color: #3c53d8;
+}
+
+.boton:hover .texto{
+    opacity: 1;
+    width: auto;
+}
+
+.boton:hover .icono{
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.item-adjuntos {
+
+    grid-column: span 2;
+    background-color: #f5f8ff;
+    box-shadow: 0 1px 15px #9b9595;
+    padding: 1.2rem;
+
+    }
+
+
+.item{
+
+    box-shadow: 0 1px 15px #9b9595;
+    background-color: #f5f8ff;
+    padding: 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+
+}
+
+.item h1{
+
+    justify-self: center;
+    color: black;
+    font-size: 1.3rem;
+
+}
+
+.item p{
+
+    color: black;
+    font-size: 1.1rem;
+    justify-self: start;
+
+}
+
+#inputArchivos {
+
+    display: none;
+
+}
+
+.boton-archivo {
+
+    background-color: #4a75da;
+    padding: 10px 20px;
+    color: #fff;
+    
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.boton-archivo:hover {
+
+    background-color: #8695e6;
+}
+
+#bloque{
+    justify-self: center;
+    align-self: center;
+
+}
+
+.item_archivo {
+    gap: 10px;
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 30px;
+    grid-template-rows: repeat(auto-fit, minmax(1fr, 1fr));
+}
+
+.item_archivo h1 {
+
+    grid-column: span 2;
+    justify-self: start;
+
+}
+
+#etiquetaNit {
+    grid-column: 1;
+    grid-row: 2;
+
+    align-self: start;
+
+
+}
+
+#etiquetaTipo {
+    grid-column: 1;
+    grid-row: 4;
+
+    align-self: start;
+
+}
+
+.item_archivo input {
+   
+
+  
+    grid-column: 1;
+    grid-row: 3;
+    background-color: #e1f2ff;
+    padding: 5px 10px;
+    border: solid #111 1px;
+    border-radius: 5px;
+    width: 100%;
+    height: 30px;
+
+}
+
+#tipo_id{
+
+
+    grid-column: 1;
+    grid-row: 5;
+
+    padding: 5px 10px;
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    border: solid #111 1px;
+    background-color: #e1f2ff;
+
+
+}
+
+#etiquetaProceso {
+    grid-column: 2;
+    grid-row: 2;
+
+    align-self: start;
+
+}
+
+#proceso_id{
+
+
+    grid-column: 2;
+    grid-row: 3;
+
+    padding: 5px 10px;
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    border: solid #111 1px;
+    background-color: #e1f2ff;
+
+
+}
+
+
+.eliminar {
+
+    grid-column: 3;
+    grid-row: 1;
+    justify-self: end;
+
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    border: solid #111 1px;
+    background-color: #da4a4a;    
+    cursor: pointer; 
+
+    transition: all 0.3s ease;
+}
+
+.guardar {
+
+    grid-column: 3;
+    grid-row: 5;
+    justify-self: end;
+
+    width: px;
+    height: 30px;
+    border-radius: 5px;
+    border: solid #111 1px;
+    background-color: #4a75da;    
+    cursor: pointer; 
+    color: #fff;
+
+    transition: all 0.3s ease;
+}
+
+.item_archivo button:hover {
+
+    background-color: #e68686;
+}
+
+
+.boton-menu {
+
+
+    position: absolute;
+    left: 20px;
+    height: 35px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #4a6ad6;
+    color: #fff;   
+    border: none;
+    border-radius: 5px;
+    padding: 5px 7px;
+    cursor: pointer;
+
+    transiition: width 0.3s ease;
+
+
+}
+
+.Abierto{
+
+    transition: width 0.3s ease;
+
+}
+
+
+.Oculto {
+
+    width: 0px;
+    transition: width 0.3s ease;
+
+}
+
+.Oculto .boton {
+
+    left: -30px;
+
+}
+
+.ocultoB {
+
+
+    left: -10px;
+    
+}
+
+
+.ocultoB, .abiertoB {
+
+    transition: left 0.3s ease;
+
+}
